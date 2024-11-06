@@ -7,6 +7,7 @@ import { Home } from "../pages/home/Home";
 import { NotFound } from "../pages/notfound/NotFound";
 import { LoginPage } from "../pages/auth/login/login";
 import { PublicRoute } from "./routes/public";
+import { Profile } from "../pages/profile/Profile";
 
 export const Router = () => {
   const router = createBrowserRouter([
@@ -37,9 +38,13 @@ export const Router = () => {
           path: "*",
           element: <NotFound />,
         },
+        {
+          path: "/profile",
+          element: <Profile />,
+        },
       ],
     },
-    { path:"/login", element:<PublicRoute element={<LoginPage/>}/>}
+    { path: "/login", element: <PublicRoute element={<LoginPage />} /> },
   ]);
 
   return <RouterProvider router={router} />;

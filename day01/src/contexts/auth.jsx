@@ -19,6 +19,7 @@ export const AuthProvider = ({children}) => {
     const handleLogout = () => {
         localStorage.removeItem("token");
         setUser(null);
+        window.location.href = "/login";
     }
 
     return <Provider value={{user, handleLogin, handleLogout}}>{children}</Provider>

@@ -19,6 +19,10 @@ export const Header = () => {
       path: "/contact",
       text: "Contact",
     },
+    {
+      path: "/profile",
+      text: "Profile",
+    },
   ];
 
   return (
